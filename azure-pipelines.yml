@@ -15,9 +15,9 @@ steps:
     script: 'npm install -g mbt @sap/cds-dk'
   displayName: Install Dependencies
 
-- script: mbt build -p=cf -s=$(Agent.BuildDirectory)\s\mta_archives\app1_0.0.1.mtar
-  displayName: MTA Build
+#- script: mbt build -p=cf -s=$(Agent.BuildDirectory)\s\mta_archives\app1_0.0.1.mtar
+#  displayName: MTA Build
 
-- script: ls $(Agent.BuildDirectory)\s\mta_archives
+- script: ls $(Agent.BuildDirectory)
   displayName: test
 
