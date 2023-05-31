@@ -6,6 +6,7 @@ default-*.json
 gen/
 node_modules/
 target/
+.vscode/
 
 # Web IDE, App Studio
 .che/
@@ -158,3 +159,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# auto generated wildcard
+app1/.env
+app2/.env
