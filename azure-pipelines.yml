@@ -33,3 +33,6 @@ steps:
 
 - script: cf login -a $(api-url) -u $(dev-user) -p $(dev-password) -o $(dev-org) -s $(space)
   displayName: Login into CF Space
+
+- script: cf deploy $(Agent.BuildDirectory)/s/app1/mta_archives/app1_1.0.0.mtar
+  displayName: Deploy to CF Space
