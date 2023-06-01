@@ -15,5 +15,5 @@ steps:
     script: 'npm install -g mbt @sap/cds-dk'
   displayName: Install CAP Build Tools and CAP Runtime Env
 
-- script: ls (Agent.BuildDirectory)
+- script: ls $(Agent.BuildDirectory)
   displayName: valid path
