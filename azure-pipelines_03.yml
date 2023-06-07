@@ -10,8 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: CommandLine
-  input: 
+- task: CmdLine@2
+  inputs: 
    script: 'npm install -g mbt @sap/cds-dk'
   displayName: Install CAP Build Tools and CAP Runtime Env
   
@@ -27,7 +27,7 @@ steps:
   displayName: Add the Cloud Foundry Foundation public key and package repository to your system by running
   
 - script: sudo apt-get update
-  diplayName: Update your local package
+  displayName: Update your local package
   
 - script: sudo apt-get install cf8-cli
   displayName: Install CF
@@ -40,6 +40,7 @@ steps:
   
 - script: cf deploy $(Agent.BuildDirectory)/s/app1/mta_archives/app1_1.0.0.mtar
   displayName: Deploy to CF Space
+
   
  
   
